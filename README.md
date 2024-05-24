@@ -6,5 +6,6 @@
 ○ перемещение слева-направо (при движении LEFT нажатие стрелки вправо),
 ○ перемещение снизу-вверх (при движении DOWN нажатие стрелки вверх).  
 Функция должна иметь вид:  
-int checkDirection(snake_t* snake, int32_t key).  
+int checkDirection(snake_t* snake, int32_t key).
+
 ![img.png](img.png)
