@@ -129,8 +129,9 @@ int main() {
 	initscr();
 	int key_pressed;
 	raw();
-	keypad(stdscr, TRUE);
-	noecho();
+	keypad(stdscr, TRUE);   //Включаем режим чтения функциональных клавиш
+	noecho();               //Выключаем отображение вводимых символов, нужно для getch()
+	halfdelay(2);           //Устанавливаем ограничение по времени ожидания getch() в 0.2 сек
 	curs_set(0);
 	snake_t* snake = (snake_t*) malloc(sizeof(snake_t));
 	initSnake(snake, START_TAIL_SIZE, START_X, START_Y);
