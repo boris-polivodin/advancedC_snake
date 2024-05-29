@@ -8,8 +8,8 @@
 #define START_Y 10
 
 enum {LEFT = 1, RIGHT, UP, DOWN, STOP_GAME = KEY_END};
-enum {MAX_TAIL_SIZE = MAX_X - 2, START_TAIL_SIZE = 2, SPEED_LEVEL = 5
-	, MAX_FOOD_SIZE = 5, FOOD_EXPIRE_SECONDS = 20};
+enum {MAX_TAIL_SIZE = MAX_X - 2, START_TAIL_SIZE = 2, SPEED_LEVEL = 4
+	, MAX_FOOD_SIZE = 5, FOOD_EXPIRE_SECONDS = 15};
 
 struct control_buttons {
 	int down;
@@ -230,6 +230,7 @@ int main() {
 					nocbreak();
 					current_speed++;
 					halfdelay(max_speed - current_speed);
+					mvprintw(MAX_Y + 1, 0, "Speed level = %d", current_speed);
 				}
 			}
 		}
